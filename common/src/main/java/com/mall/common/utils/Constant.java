@@ -57,7 +57,7 @@ public class Constant {
          */
         BUTTON(2);
 
-        private int value;
+        private final int value;
 
         MenuType(int value) {
             this.value = value;
@@ -85,7 +85,7 @@ public class Constant {
          */
     	PAUSE(1);
 
-        private int value;
+        private final int value;
 
         ScheduleStatus(int value) {
             this.value = value;
@@ -113,7 +113,7 @@ public class Constant {
          */
         QCLOUD(3);
 
-        private int value;
+        private final int value;
 
         CloudService(int value) {
             this.value = value;
