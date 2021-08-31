@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.mall.common.utils.PageUtils;
 import com.mall.product.entity.CategoryEntity;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -16,5 +17,13 @@ import java.util.Map;
 public interface CategoryService extends IService<CategoryEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+    /**
+     * 按照父子结构列出所有数据
+     * @Date 16:28 2021/8/30
+     * @return  java.util.List<com.mall.product.entity.CategoryEntity>
+     **/
+    List<CategoryEntity> listWithTree();
+
+    void removeMenuByIds(List<Long> asList);
 }
 
